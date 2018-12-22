@@ -1,5 +1,9 @@
 # Does things
 class ArticlesController < ApplicationController
+  def index
+    @articles = Article.all
+  end
+
   def new
     @article = Article.new
   end
@@ -16,8 +20,8 @@ class ArticlesController < ApplicationController
     else
       render 'new'
     end
-
   end
+
   def update
     @article = Article..find(params[:id])
     if @article.update(article_params)
@@ -27,6 +31,7 @@ class ArticlesController < ApplicationController
       render 'edit'
     end
   end
+
   def show
     @article = Article.find(param[:id])
   end
