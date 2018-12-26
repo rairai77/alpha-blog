@@ -45,7 +45,7 @@ environment ENV.fetch("RAILS_ENV") { "development" }
 # process is booted, this block will be run. If you are using the `preload_app!`
 # option, you will want to use this block to reconnect to any threads
 # or connections that may have been created at application boot, as Ruby
-# cannot share connections between processes.
+# cannot shared connections between processes.
 #
 # on_worker_boot do
 #   ActiveRecord::Base.establish_connection if defined?(ActiveRecord)
